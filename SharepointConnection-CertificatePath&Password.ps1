@@ -1,12 +1,12 @@
 #Sharepoint Connection using certificate path and password. 
-$BaseURL = "https://dgneaseteq.sharepoint.com"
+$BaseURL = "https://tenant.sharepoint.com"
 
-$ClientID = "293f06c2-8425-47de-b12d-1c78cd3f6a0d"
+$ClientID = "< client id >"
 
-$Tenant = "dgneaseteq.onmicrosoft.com"
+$Tenant = "tenant.onmicrosoft.com"
 
-$CertificatePath = "C:\Users\EaseTeqLT08\Powershell Certificates\PnPPowerShell-App-Only-Authentication.pfx"
+$CertificatePath = "<.pfx file path>"
 
-$Password = (ConvertTo-SecureString -AsPlainText "P@55w0rd" -Force)
+$Password = (ConvertTo-SecureString -AsPlainText "< password >" -Force)
 
 Connect-PnPOnline -ClientId $ClientID -CertificatePath $CertificatePath -CertificatePassword $Password -Url "$BaseURL" -Tenant $Tenant
