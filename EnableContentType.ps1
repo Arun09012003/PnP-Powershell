@@ -1,5 +1,5 @@
-$ClientId = "d5aff94a-8d5e-4f4c-99f5-4abaec89dd7f"
-$TenantId = "dgneaseteq.onmicrosoft.com"
-Connect-PnPOnline -Url "https://dgneaseteq.sharepoint.com/sites/100101" -ClientId $ClientId -Tenant $TenantId -Interactive
+$ClientId = "< client id >"
+$TenantId = "< tenant id >"
+Connect-PnPOnline -Url "< site url >" -ClientId $ClientId -Tenant $TenantId -Interactive
 
 Set-PnPList -Identity "Shared Documents" -EnableContentTypes $True
