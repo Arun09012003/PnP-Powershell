@@ -1,8 +1,8 @@
-$BaseURL = "https://dgneaseteq.sharepoint.com/sites"
-$ClientID = "293f06c2-8425-47de-b12d-1c78cd3f6a0d"
-$Tenant = "dgneaseteq.onmicrosoft.com"
-$CertificatePath = "C:\Users\EaseTeqLT08\Powershell Certificates\PnPPowerShell-App-Only-Authentication.pfx"
-$Password = (ConvertTo-SecureString -AsPlainText "P@55w0rd" -Force)
+$BaseURL = "https://tenant.sharepoint.com/sites"
+$ClientID = "< client id >"
+$Tenant = "tenant.onmicrosoft.com"
+$CertificatePath = "< .pfx file path >"
+$Password = (ConvertTo-SecureString -AsPlainText "< certificate password >" -Force)
 
 Connect-PnPOnline -ClientId $ClientID -CertificatePath $CertificatePath -CertificatePassword $Password -Url "$BaseURL/Arun" -Tenant $Tenant
 
@@ -16,4 +16,4 @@ New-PnPSite -Type TeamSite `
 # New-PnPSite -Type TeamSite `
 #             -Title $siteTitle `
 #             -Alias $alias `
-#             -Owner "arunjatak@dgneaseteq.onmicrosoft.com"
+#             -Owner "< user email >"
