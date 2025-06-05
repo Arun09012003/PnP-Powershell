@@ -1,7 +1,7 @@
-$ClientId = "d5aff94a-8d5e-4f4c-99f5-4abaec89dd7f"
+$ClientId = "< client id >"
 
-$TenantId = "dgneaseteq.onmicrosoft.com"
+$TenantId = "tenant.onmicrosoft.com"
 
-Connect-PnPOnline -Url "https://dgneaseteq.sharepoint.com" -ClientId $ClientId -Tenant $TenantId -Interactive
+Connect-PnPOnline -Url "https://tenant.sharepoint.com" -ClientId $ClientId -Tenant $TenantId -Interactive
 
-Disconnect-PnPOnline
+#Disconnect-PnPOnline
