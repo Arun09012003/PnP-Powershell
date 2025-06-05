@@ -4,12 +4,12 @@
 
 $Cert = Get-ChildItem -Path Cert:\CurrentUser\My | Where-Object {$_.Subject -eq "CN=PnPPowerShell-App-Only-Authentication"}
 
-$CertCerPath = "C:\Users\EaseTeqLT08\Powershell Certificates\PnPPowerShell-App-Only-Authentication.cer"
+$CertCerPath = "< .cer file path>"
 
 Export-Certificate -Cert $Cert -FilePath $CertCerPath -Type CERT
 
-$CertPfxPath = "C:\Users\EaseTeqLT08\Powershell Certificates\PnPPowerShell-App-Only-Authentication.pfx"
+$CertPfxPath = "< .pfx file path >"
 
-$Password = ConvertTo-SecureString -String "P@55w0rd" -Force -AsPlainText
+$Password = ConvertTo-SecureString -String "<password>" -Force -AsPlainText
 
 Export-PfxCertificate -Cert $Cert -FilePath $CertPfxPath -Password $Password
